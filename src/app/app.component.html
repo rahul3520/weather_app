@@ -1,0 +1,41 @@
+<h1>Weather Application</h1>
+
+<div class="container">
+  <div class="row g-3">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+      <div class="row g-3">
+
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+
+          <label for="" class="label-control">Enter latitude of Location : </label>
+          <input name="latitude" [(ngModel)]="latitude" value={{latitude}}  type="text" class="form-control">
+
+          <label for="" class="label-control">Enter longitude of Location : </label>
+          <input name="longitude" [(ngModel)]="longitude" value={{longitude}}  type="text" class="form-control">
+
+
+          <button class="btn btn-success" (click)="findWeather(latitude)">Search Weather</button>
+
+        </div>
+
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+
+          <label for="" class="label-control">Temperature: </label>
+          <input type="text" class="form-control" value={{temperature}}>
+
+          <label for="" class="label-control">Wind Speed: </label>
+          <input type="text" class="form-control" value={{windspeed}}>
+          
+          <label for="" class="label-control">Wind Direction: </label>
+          <input type="text" class="form-control" value={{winddirection}}>
+      
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
